@@ -42,7 +42,7 @@ The primary difference between the TRANSACTION command and the execution of any 
 
 ### 8. [8] What is a Virtual View and what are its advantages?
 
-Replace this content with your answer
+A virtual view is a type of SQL relation that does not physically exist, but can still be queried (and occasionally modified). Views are defined using an expression and built from information stored in other relations. The syntax for creating a virtual view is: CREATE VIEW name AS definition;. Generally, views are used for queries, as there are very few cases in which views can be modified. Since views do not store unique data, a modification to a view must alter the physical relation that the view was created from. A view is advantageous as they can be used to simplify future queries. For example, if queries need to often join two tables together to produce an output relation, it may make more sense to create a view that joins the two relation. Then, the view can be queried in the same way as a normal table, and the join statement only needs to be written once (as the view definition). Views can also be used when displaying database content to a user, as they can limit the exposure of the interla structure of the database. For example, certain attributes of a relation might only be used for managing the database (like an ID number), and do not need to be displayed to the user. A view could be employed to ensure that the user does not access data that they should not see. Finally, the attribute names in a created view can be modified from the base tables, which could aid in the presentation of database content.
 
 ### 9. [8.3] What is an *index* and what are its advantages?
 
